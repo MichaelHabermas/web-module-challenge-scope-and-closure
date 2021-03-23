@@ -87,11 +87,11 @@ Use the finalScore function below to do the following:
 }
 */
 
-function finalScore(inning, numOfInnings) {
+function finalScore(callback, numOfInnings) {
 	let score = { Home: 0, Away: 0 };
 	for (let i = 0; i < numOfInnings; i++) {
-		score.Home += inning();
-		score.Away += inning();
+		score.Home += callback();
+		score.Away += callback();
 	}
 	return score;
 }
